@@ -1,0 +1,8 @@
+<h1>Reminders</h1>
+<ol>
+  <% @reminders.each do |reminder| %>
+    <li>
+      <%= reminder.message %> (Time: <%= reminder.time %>)
+    </li>
+  <% end %>
+</ol>
