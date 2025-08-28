@@ -1,0 +1,53 @@
+
+# Ignore bundler config
+.bundle/
+
+# Ignore log files and temp files.
+log/
+tmp/
+
+# Ignore database files
+db/*.sqlite3
+db/*.sqlite3-*
+
+# Ignore Rails secret key base, credentials, and master key
+config/master.key
+config/credentials.yml.enc
+
+# Ignore byebug command history file.
+.byebug_history
+
+# Ignore node modules and yarn files
+node_modules/
+yarn-error.log
+yarn-debug.log*
+
+# Ignore public assets that are compiled
+public/assets/
+public/packs/
+public/packs-test/
+public/uploads/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore system files
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+.project
+.classpath
+.c9/
+.env
+.env.*
+.history
+
+# Ignore test and spec temp files
+spec/tmp/
+spec/examples.txt
+
+# Ignore other editor files
+*.sublime-workspace
+*.sublime-project
