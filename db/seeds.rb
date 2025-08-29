@@ -1,29 +1,18 @@
-HousePlant.destroy_all
-Room.destroy_all
+Notification.destroy_all
+Reminder.destroy_all
+Event.destroy_all
 
-rooms = [
-  { name: "Power Code Academy Classroom", occupancy: 7 },
-  { name: "Atlanta", occupancy: 12 },
-  { name: "Cincinnati", occupancy: 9 },
-  { name: "Reading", occupancy: 11 },
-  { name: "Executive Boardroom", occupancy: 22 }
-]
 
-rooms.each { |room_attributes| Room.create(room_attributes) }
+event1 = Event.create!(title: "Team Meeting", date: Date.today)
+event2 = Event.create!(title: "Product Launch", date: Date.today + 7)
+event3 = Event.create!(title: "Company Picnic", date: Date.today + 14)
 
-house_plants = [
-  { plant_type: "Spider plant", height: 12 },
-  { plant_type: "Devil's ivy", height: 18 },
-  { plant_type: "Jade plant", height: 5 },
-  { plant_type: "Sword fern", height: 8 },
-  { plant_type: "Rubber fig", height: 21 },
-  { plant_type: "Fiddle-leaf fig", height: 17 }
-]
+reminder1 = Reminder.create!(message: "Prepare slides", time: DateTime.now + 1.hour, event: event1)
+reminder2 = Reminder.create!(message: "Send invites", time: DateTime.now + 2.hours, event: event1)
+reminder3 = Reminder.create!(message: "Check catering", time: DateTime.now + 1.day, event: event3)
+reminder4 = Reminder.create!(message: "Book venue", time: DateTime.now + 3.days, event: event3)
 
-house_plants = house_plants.map do |plant_attributes|
-  plant_attributes.merge(room_id: Room.all.sample.id)
-end
-
-house_plants.each do |plant_attributes|
-  HousePlant.create(plant_attributes)
-end
+Notification.create!(recipient: "alice@example.com", sent_at: DateTime.now + 30.minutes, reminder: reminder1)
+Notification.create!(recipient: "bob@example.com", sent_at: DateTime.now + 45.minutes, reminder: reminder1)
+Notification.create!(recipient: "charlie@example.com", sent_at: DateTime.now + 2.hours, reminder: reminder2)
+Notification.create!(recipient: "dave@example.com", sent_at: DateTime.now + 1.day, reminder: reminder3)

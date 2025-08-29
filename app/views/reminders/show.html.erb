@@ -1,0 +1,7 @@
+<h1>Reminder</h1>
+
+<ol>
+  <% @reminder.notifications.each do |notification| %>
+    <li><br><%=notification.recipient %> <%= notification.sent_at %></li>
+  <% end %>
+</ol>

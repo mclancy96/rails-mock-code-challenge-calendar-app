@@ -1,0 +1,10 @@
+<h1>Events</h1>
+
+<ol>
+  <br>
+  <h2>Title: <%= @event.title %></h2>
+  <h2>Date: <%= @event.date %></h2>
+  <% @event.reminders.each do |reminder| %>
+    <li><br><%=reminder.message %> <% reminder.time %></li>
+  <% end %>
+</ol>

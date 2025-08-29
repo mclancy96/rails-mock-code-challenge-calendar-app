@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :rooms, only: [:index]
-  resources :house_plants, only: [:index]
+  resources :events
+  resources :reminders
+  resources :notifications
 end

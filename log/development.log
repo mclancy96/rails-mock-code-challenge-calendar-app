@@ -1536,3 +1536,393 @@ app/controllers/house_plants_controller.rb:18:in `create'
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotifications (20250828204334)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar, "sent_at" datetime(6), "reminder_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5830ae22e4"
+FOREIGN KEY ("reminder_id")
+  REFERENCES "reminders" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_notifications_on_reminder_id" ON "notifications" ("reminder_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250828204334') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotifications (20250828204334)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "notifications"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250828204334'[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReminders (20190610081955)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "reminders"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotifications (20250828204334)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar, "sent_at" datetime(6), "reminder_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5830ae22e4"
+FOREIGN KEY ("reminder_id")
+  REFERENCES "reminders" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_notifications_on_reminder_id" ON "notifications" ("reminder_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250828204334') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotifications (20250828204334)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "notifications"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250828204334'[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReminders (20190610081955)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "reminders"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotifications (20250828204334)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar, "sent_at" datetime(6), "reminder_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5830ae22e4"
+FOREIGN KEY ("reminder_id")
+  REFERENCES "reminders" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_notifications_on_reminder_id" ON "notifications" ("reminder_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250828204334') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20250828231633)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "date" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250828231633') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReminders (20250828231643)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "reminders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar, "time" datetime(6), "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3793fddbe7"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_reminders_on_event_id" ON "reminders" ("event_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250828231643') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  [1m[36mReminder Load (0.0ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders"[0m
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Team Meeting"], ["date", "2025-08-28"], ["created_at", "2025-08-28 23:26:05.602984"], ["updated_at", "2025-08-28 23:26:05.602984"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Product Launch"], ["date", "2025-09-04"], ["created_at", "2025-08-28 23:26:05.605288"], ["updated_at", "2025-08-28 23:26:05.605288"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (2.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Company Picnic"], ["date", "2025-09-11"], ["created_at", "2025-08-28 23:26:05.606363"], ["updated_at", "2025-08-28 23:26:05.606363"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.4ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Prepare slides"], ["time", "2025-08-29 00:26:05.615181"], ["event_id", 1], ["created_at", "2025-08-28 23:26:05.631731"], ["updated_at", "2025-08-28 23:26:05.631731"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Send invites"], ["time", "2025-08-29 01:26:05.633041"], ["event_id", 1], ["created_at", "2025-08-28 23:26:05.633277"], ["updated_at", "2025-08-28 23:26:05.633277"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Check catering"], ["time", "2025-08-29 23:26:05.633952"], ["event_id", 3], ["created_at", "2025-08-28 23:26:05.634142"], ["updated_at", "2025-08-28 23:26:05.634142"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Book venue"], ["time", "2025-08-31 23:26:05.634981"], ["event_id", 3], ["created_at", "2025-08-28 23:26:05.635172"], ["updated_at", "2025-08-28 23:26:05.635172"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.2ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "alice@example.com"], ["sent_at", "2025-08-28 23:56:05.635988"], ["reminder_id", 1], ["created_at", "2025-08-28 23:26:05.637323"], ["updated_at", "2025-08-28 23:26:05.637323"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.2ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "bob@example.com"], ["sent_at", "2025-08-29 00:11:05.638004"], ["reminder_id", 1], ["created_at", "2025-08-28 23:26:05.638167"], ["updated_at", "2025-08-28 23:26:05.638167"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.3ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "charlie@example.com"], ["sent_at", "2025-08-29 01:26:05.638893"], ["reminder_id", 2], ["created_at", "2025-08-28 23:26:05.639072"], ["updated_at", "2025-08-28 23:26:05.639072"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.2ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "dave@example.com"], ["sent_at", "2025-08-29 23:26:05.639794"], ["reminder_id", 3], ["created_at", "2025-08-28 23:26:05.639965"], ["updated_at", "2025-08-28 23:26:05.639965"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notifications" WHERE "notifications"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Destroy (2.0ms)[0m  [1m[31mDELETE FROM "notifications" WHERE "notifications"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Destroy (0.6ms)[0m  [1m[31mDELETE FROM "notifications" WHERE "notifications"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Destroy (1.7ms)[0m  [1m[31mDELETE FROM "notifications" WHERE "notifications"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mReminder Load (0.0ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Destroy (3.7ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Team Meeting"], ["date", "2025-08-28"], ["created_at", "2025-08-28 23:26:16.397324"], ["updated_at", "2025-08-28 23:26:16.397324"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Product Launch"], ["date", "2025-09-04"], ["created_at", "2025-08-28 23:26:16.398670"], ["updated_at", "2025-08-28 23:26:16.398670"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Company Picnic"], ["date", "2025-09-11"], ["created_at", "2025-08-28 23:26:16.399456"], ["updated_at", "2025-08-28 23:26:16.399456"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Prepare slides"], ["time", "2025-08-29 00:26:16.400351"], ["event_id", 4], ["created_at", "2025-08-28 23:26:16.401390"], ["updated_at", "2025-08-28 23:26:16.401390"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Send invites"], ["time", "2025-08-29 01:26:16.402070"], ["event_id", 4], ["created_at", "2025-08-28 23:26:16.402240"], ["updated_at", "2025-08-28 23:26:16.402240"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Check catering"], ["time", "2025-08-29 23:26:16.402871"], ["event_id", 6], ["created_at", "2025-08-28 23:26:16.403061"], ["updated_at", "2025-08-28 23:26:16.403061"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.2ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Book venue"], ["time", "2025-08-31 23:26:16.403704"], ["event_id", 6], ["created_at", "2025-08-28 23:26:16.403882"], ["updated_at", "2025-08-28 23:26:16.403882"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (2.1ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "alice@example.com"], ["sent_at", "2025-08-28 23:56:16.404526"], ["reminder_id", 5], ["created_at", "2025-08-28 23:26:16.404759"], ["updated_at", "2025-08-28 23:26:16.404759"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.2ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "bob@example.com"], ["sent_at", "2025-08-29 00:11:16.407328"], ["reminder_id", 5], ["created_at", "2025-08-28 23:26:16.407550"], ["updated_at", "2025-08-28 23:26:16.407550"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.2ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "charlie@example.com"], ["sent_at", "2025-08-29 01:26:16.408180"], ["reminder_id", 6], ["created_at", "2025-08-28 23:26:16.408349"], ["updated_at", "2025-08-28 23:26:16.408349"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.2ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "dave@example.com"], ["sent_at", "2025-08-29 23:26:16.409197"], ["reminder_id", 7], ["created_at", "2025-08-28 23:26:16.409372"], ["updated_at", "2025-08-28 23:26:16.409372"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Team Meeting"], ["date", "2025-08-28"], ["created_at", "2025-08-28 23:26:41.471868"], ["updated_at", "2025-08-28 23:26:41.471868"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReminder Create (0.4ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Prepare slides"], ["time", "2025-08-29 00:26:50.465642"], ["event_id", 7], ["created_at", "2025-08-28 23:26:50.472413"], ["updated_at", "2025-08-28 23:26:50.472413"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNotification Create (0.3ms)[0m  [1m[32mINSERT INTO "notifications" ("recipient", "sent_at", "reminder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["recipient", "alice@example.com"], ["sent_at", "2025-08-28 23:26:58.680081"], ["reminder_id", 9], ["created_at", "2025-08-28 23:26:58.683768"], ["updated_at", "2025-08-28 23:26:58.683768"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mReminder Load (0.3ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mNotification Load (0.2ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mNotification Load (0.3ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" ORDER BY "notifications"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" ORDER BY "notifications"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" ORDER BY "notifications"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mReminder Load (0.1ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" WHERE "reminders"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 20:46:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:7:in `show'
+Completed 404 Not Found in 14ms (ActiveRecord: 0.9ms | Allocations: 11717)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'="new"):
+  
+app/controllers/events_controller.rb:7:in `show'
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 20:48:17 -0400
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2535)
+  Rendered layout layouts/application.html.erb (Duration: 94.8ms | Allocations: 92730)
+Completed 200 OK in 108ms (Views: 96.1ms | ActiveRecord: 1.6ms | Allocations: 106502)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 20:54:56 -0400
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1753)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6134)
+Completed 200 OK in 21ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 17051)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 20:54:58 -0400
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4912)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 5686)
+
+
+Started POST "/events" for 127.0.0.1 at 2025-08-28 20:55:03 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"KmTYQFaPkkCN3kgo1um8cCHhtuXJZeiK03e0VVRVOYNpoPiC-kHp5aeyTc2S_1s74_DDtOw7HFfXJXg07D59NA", "event"=>{"title"=>"", "date"=>""}, "commit"=>"Create Event "}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:17:in `create'
+  [1m[36mEvent Create (2.7ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", ""], ["date", nil], ["created_at", "2025-08-29 00:55:03.441957"], ["updated_at", "2025-08-29 00:55:03.441957"]]
+  ↳ app/controllers/events_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:17:in `create'
+Redirected to http://localhost:3000/events/8
+Completed 302 Found in 7ms (ActiveRecord: 4.2ms | Allocations: 3738)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2025-08-28 20:55:03 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mReminder Load (0.0ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" WHERE "reminders"."event_id" = ?[0m  [["event_id", 8]]
+  ↳ app/views/events/show.html.erb:7
+  Rendered events/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 5524)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 7205)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 20:56:36 -0400
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4946)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 5725)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 20:57:46 -0400
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1277)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 5560)
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 1.4ms | Allocations: 15141)
+
+
+Started GET "/events" for 127.0.0.1 at 2025-08-28 21:16:41 -0400
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3389)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 7786)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 1.4ms | Allocations: 9977)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-08-28 21:16:43 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mReminder Load (0.1ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" WHERE "reminders"."event_id" = ?[0m  [["event_id", 4]]
+  ↳ app/views/events/show.html.erb:7
+  Rendered events/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 5859)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 9921)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 11522)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-08-28 21:16:48 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mReminder Load (0.1ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" WHERE "reminders"."event_id" = ?[0m  [["event_id", 7]]
+  ↳ app/views/events/show.html.erb:7
+  Rendered events/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4692)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5662)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-08-28 21:19:04 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mReminder Load (0.1ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" WHERE "reminders"."event_id" = ?[0m  [["event_id", 7]]
+  ↳ app/views/events/show.html.erb:7
+  Rendered events/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4625)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 5567)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2025-08-28 21:20:01 -0400
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1220)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5280)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 6162)
+
+
+Started POST "/events" for 127.0.0.1 at 2025-08-28 21:20:19 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"JK69rUiye2y4ercMW5jZbVqQgapM_rAPdcnKOILk82Jnap1v5HwAyZIWsukfjj4mmIH0-2mgRNJxmwZZOo-31Q", "event"=>{"title"=>"happy feet", "date"=>"2025-08-20", "reminders_attributes"=>{"0"=>{"message"=>"happy", "time"=>"11:20"}}}, "commit"=>"Create Event "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:17:in `create'
+  [1m[36mEvent Create (1.6ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "happy feet"], ["date", "2025-08-20"], ["created_at", "2025-08-29 01:20:19.443764"], ["updated_at", "2025-08-29 01:20:19.443764"]]
+  ↳ app/controllers/events_controller.rb:17:in `create'
+  [1m[36mReminder Create (0.1ms)[0m  [1m[32mINSERT INTO "reminders" ("message", "time", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "happy"], ["time", "2025-08-29 11:20:00"], ["event_id", 9], ["created_at", "2025-08-29 01:20:19.447399"], ["updated_at", "2025-08-29 01:20:19.447399"]]
+  ↳ app/controllers/events_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:17:in `create'
+Redirected to http://localhost:3000/events/9
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms | Allocations: 3998)
+
+
+Started GET "/events/9" for 127.0.0.1 at 2025-08-28 21:20:19 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mReminder Load (0.0ms)[0m  [1m[34mSELECT "reminders".* FROM "reminders" WHERE "reminders"."event_id" = ?[0m  [["event_id", 9]]
+  ↳ app/views/events/show.html.erb:7
+  Rendered events/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4599)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 5539)
+
+

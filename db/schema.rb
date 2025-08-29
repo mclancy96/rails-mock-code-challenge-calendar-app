@@ -10,15 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2019_06_10_081955) do
+ActiveRecord::Schema[7.1].define(version: 2025_08_28_231643) do
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "house_plants", force: :cascade do |t|
     t.string "plant_type"
     t.integer "height"
+    t.integer "room_id", null: false
+    t.index ["room_id"], name: "index_house_plants_on_room_id"
   end
 
-  create_table "rooms", force: :cascade do |t|
-    t.string "name"
-    t.integer "occupancy"
+  create_table "notifications", force: :cascade do |t|
+    t.string "recipient"
+    t.datetime "sent_at"
+    t.integer "reminder_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reminder_id"], name: "index_notifications_on_reminder_id"
   end
 
+  create_table "reminders", force: :cascade do |t|
+    t.string "message"
+    t.datetime "time"
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_reminders_on_event_id"
+  end
+
+  add_foreign_key "notifications", "reminders"
+  add_foreign_key "reminders", "events"
 end
